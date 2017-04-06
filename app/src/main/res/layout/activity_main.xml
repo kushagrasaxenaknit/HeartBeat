@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.kushagrasaxena.heartbeat.MainActivity">
+
+    <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+        android:id="@+id/file"
+        android:layout_width="146dp"
+
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_state_selector"
+        android:textSize="18sp"
+        app:pb_colorCancelText="@color/pb_orange"
+        app:pb_colorCompleteText="@color/pb_orange"
+        app:pb_colorErrorText="@color/pb_blue"
+        app:pb_colorIndicator="@color/colorButtonCompleteState"
+        app:pb_cornerRadius="48dp"
+        app:pb_iconCancel="@drawable/ic_action_cross"
+        app:pb_iconComplete="@drawable/ic_action_accept"
+        app:pb_iconError="@drawable/ic_action_cancel"
+        app:pb_selectorCancel="@color/pb_cancel_state_selector"
+        app:pb_selectorComplete="@color/complete_state_selector"
+        app:pb_selectorError="@color/error_state_selector"
+        app:pb_selectorIdle="@color/idle_state_selector"
+        app:pb_textColorAfterClick="@color/colorWhite"
+        app:pb_textIdle="Select File" />
+
+    <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+        android:id="@+id/task"
+        android:layout_width="146dp"
+        android:layout_height="44dp"
+        android:layout_below="@+id/file"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_state_selector"
+        android:textSize="18sp"
+        app:pb_colorCancelText="@color/pb_orange"
+        app:pb_colorCompleteText="@color/pb_orange"
+        app:pb_colorErrorText="@color/pb_blue"
+        app:pb_colorIndicator="@color/colorButtonCompleteState"
+        app:pb_cornerRadius="48dp"
+        app:pb_iconCancel="@drawable/ic_action_cross"
+        app:pb_iconComplete="@drawable/ic_action_accept"
+        app:pb_iconError="@drawable/ic_action_cancel"
+        app:pb_selectorCancel="@color/pb_cancel_state_selector"
+        app:pb_selectorComplete="@color/complete_state_selector"
+        app:pb_selectorError="@color/error_state_selector"
+        app:pb_selectorIdle="@color/idle_state_selector"
+        app:pb_textColorAfterClick="@color/colorWhite"
+        app:pb_textIdle="Get Heart Beat" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/task"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+
+        android:hint="Enter Threshold ,Default=0.28"
+        android:inputType="numberDecimal" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/editText"
+
+        android:text="Heart Beat :"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMainSelectedCate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
